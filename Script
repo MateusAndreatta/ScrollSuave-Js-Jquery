@@ -1,0 +1,9 @@
+//Scrol Suave
+ $('.scrollsuave').click(function(e){//Tudo que tiver com a class "scrollsuave" executa a função
+	e.preventDefault();//remove a hash
+	var id = $(this).attr('href'),
+			targetOffset = $(id).offset().top;//pega a id do elemento alvo
+	$('html, body').animate({
+		scrollTop: targetOffset
+	}, 700);//velocidade em ms
+});
